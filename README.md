@@ -4,7 +4,7 @@ The `3.0.1` version is now available! This should resolve a number of text handl
 
 ### Upgrading from 2.* to 3.0
 
-For most developers, the migration should be fairly simple. Here are the likely issues you'll need to resolve:
+For most developers, the migration should be fairly simple. Here are the likely issues you'll need to resolves:
 
 1. The view now inherits from `AppCompatAutoCompleteTextView`. You probably don't need to make any changes for this, but you will need to include the Android support library if you are not already.
 
