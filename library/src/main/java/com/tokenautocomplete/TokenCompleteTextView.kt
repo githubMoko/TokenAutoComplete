@@ -158,14 +158,15 @@ abstract class TokenCompleteTextView<T: Any> : AppCompatAutoCompleteTextView, On
                 }
 
                 //Detect split characters, remove them and complete the current token instead
-                if (tokenizer!!.containsTokenTerminator(source)) {
-                    //Only perform completion if we don't allow free form text, or if there's enough
-                    //content to believe this should be a token
-                    if (preventFreeFormText || currentCompletionText().isNotEmpty()) {
-                        performCompletion()
-                        return@InputFilter ""
-                    }
-                }
+                // TODO: - find way to recognize email and others...
+//                if (tokenizer!!.containsTokenTerminator(source)) {
+//                    //Only perform completion if we don't allow free form text, or if there's enough
+//                    //content to believe this should be a token
+//                    if (preventFreeFormText || currentCompletionText().isNotEmpty()) {
+//                        performCompletion()
+//                        return@InputFilter ""
+//                    }
+//                }
 
                 //We need to not do anything when we would delete the prefix
                 prefix?.also { prefix ->
